@@ -1,0 +1,28 @@
+Criar virtual env:
+    python3.7 -m venv venv
+Ativar:
+Dentro da pasta:
+    . venv/bin/activate
+criar o projeto no django:
+    django-admin startproject <nome-do-projeto>
+
+criar tabelas no BD:
+    python3 manager.py makemigrations
+    python3 manager.py migrate
+Criando super usuário:
+    python3 manager.py createsuperuser
+Criando um app
+    python3 manager.py starapp <nome-do-app>
+
+comando do Git
+    git init
+    git add README.md
+    git commit -m "first commit"
+    git remote add origin https://github.com/andersonsimplicio/website.git
+    git push -u origin master
+
+    verificar as Branch:
+        git branch -v
+
+
+

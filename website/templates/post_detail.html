@@ -1,0 +1,68 @@
+<!DOCTYPE HTML>
+{% load static %}
+<html>
+	<head>
+		<title>Strata by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="{% static 'assets/css/main.css' %}" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<div class="inner">
+					<a href="{% url 'home_blog' %}" class="image avatar"><img src="{% static 'images/foto.jpg' %}" alt="" /></a>
+					<h1><strong>Eu sou Anderson José Simplício</strong>, Sou um desenvolvedor backend da whpages<br/>
+					e um entusiasta de Tecnologia. <br/>
+					Use Linux.</h1>
+				</div>
+			</header>
+
+		<!-- Main -->
+			<div id="main">
+
+				<!-- One -->
+					<section id="one">
+						<header class="major">
+                            <img src="{{post.imagem.url}}" width="40%"/>
+							<h1>{{ post.title }}<br></h1>
+
+						</header>
+						<h3>{{ post.sub_title }}</h3>
+                        <article class="col-6 col-12-xsmall work-item">
+								<p>{{ post.content}}</p>
+                        </article>
+                         <h4>Categoria: {{ post.get_categories_display }}</h4>
+
+                        <ul class="actions">
+									<li><a href="{%  url 'home_blog' %}" class="button">voltar</a></li>
+								</ul>
+					</section>
+			</div>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+					<ul class="icons">
+						<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
+						<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
+						<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+					</ul>
+					<ul class="copyright">
+						<li>&copy; Untitled</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="{% static 'assets/js/jquery.min.js' %}"></script>
+			<script src="{% static 'assets/js/jquery.poptrox.min.js' %}"></script>
+			<script src="{% static 'assets/js/browser.min.js' %}"></script>
+			<script src="{% static 'assets/js/breakpoints.min.js' %}"></script>
+			<script src="{% static 'assets/js/util.js' %}"></script>
+			<script src="{% static 'assets/js/main.js' %}"></script>
+
+	</body>
+</html>

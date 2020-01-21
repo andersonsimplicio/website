@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Web-Site</title>
+</head>
+<body>
+    <h1>{{name}}</h1>
+    <ol>
+    {% for item in lista_tech %}
+        {%if item == 'Django'%}
+        <li><b>{{item}}</b></li>
+        {%else%}
+         <li>{{item}}</li>
+        {%endif%}
+
+    {% endfor %}
+    </ol>
+    <h1>Artigos Publicados: </h1>
+    <hr>
+    <br>
+      {% for post in posts %}
+        <h2>{{post.title}}</h2>
+        <h3>{{post.sub_title}}</h3>
+        <p>{{post.content}}</p>
+        <hr>
+        <br>
+      {% endfor %}
+</body>
+</html>
